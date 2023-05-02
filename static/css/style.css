@@ -1,0 +1,147 @@
+.header{
+    width: 200px;
+    height: 200px;
+    margin: 20px auto 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    text-align: center;
+    justify-content: center;
+
+}
+
+.heading{
+    margin: -50px auto;
+    font-weight: bold;
+    font-size: 20px;
+}
+.container{
+    height: 300px;
+    width: 1100px;
+    display: flex;
+    margin: 50px auto;
+    flex-wrap: wrap;
+}
+
+.wrapper{
+    width: 1200px;
+    height: 500px;
+    background-color: #4d8143;
+    display: flex;
+    margin: 50px auto;   
+    flex-wrap: wrap;
+    border-radius: 10px;
+}
+.card_area{
+    width: 1100px;
+
+}
+.card{
+    height: 300px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid black;
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0 5px;
+    display: inline-block;
+    box-shadow: 1px 1px black;
+}
+
+.card_value{
+    margin: 50px 0;
+}
+
+.hold{
+    display:flex;
+    height: 40px;
+    width: 70px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px black;
+    background-color: cyan;
+    border-radius: 5px;
+}
+
+.held{
+    display:flex;
+    height: 40px;
+    width: 70px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px black;
+    background-color:red;
+    border-radius: 5px;
+}
+
+.btn{
+    display:flex;
+    height: 50px;
+    width: 120px;
+    margin: 0 auto;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 2px 2px black;
+}
+
+.display_none{
+    display: none;
+}
+
+.playgame{
+    margin-top: 20px;
+    background-color: black;
+    color: white;
+}
+
+.rightside{
+    margin: 0 0 0 1400px;
+    background-color: red;
+}
+
+.spades{
+    background-image: url("imgs/spades.png");
+    height: 50px;
+    width: 50px;
+    margin: -20px auto 20px auto;
+}
+
+.clubs{
+    background-image: url("imgs/clubs.png");
+    height: 50px;
+    width: 50px;
+    margin: -20px auto 20px auto;
+}
+
+.hearts{
+    background-image: url("imgs/hearts.png");
+    height: 50px;
+    width: 50px;
+    margin: -20px auto 20px auto;
+}
+
+.diamonds{
+    background-image: url("imgs/diamonds.png");
+    height: 50px;
+    width: 50px;
+    margin: -20px auto 20px auto;
+}
+
+.status{
+    margin-top: 25px;
+    color: white;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.drawbutton{
+    margin: 0 auto;
+    margin-top: -50px;
+    justify-content: center;
+    align-self: center;
+}
+
+h4{
+    margin-bottom: -20px;
+}

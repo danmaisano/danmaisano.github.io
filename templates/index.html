@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="static/js/script.js"></script>
+    <title>Poker!</title>
+</head>
+<body>
+    <div class="{{show_header}}">
+        <form action="/start_game" method="post" class="{{header_class}}">
+            <label> Enter Your Name</label>
+            <input type="text" name="player_name" id="player_name">
+            <button class="btn btn-outline-dark playgame">Play</button>
+        </form>
+        <br>
+        <p class = heading>
+
+        </p>
+    </div>
+    <div class="{{show_game}}">
+        
+        <div class="container">
+            <div class="card_area">
+                <div class="card">
+                    <div class="card_value">
+                        {{card1val}}
+                    </div>
+                <div class="{{ card1suit }}""> </div>
+                    <form action="/hold" method="post">
+                        <button class="{{card1status}}" name="hold" value="card1hold">{{card1status.title()}}</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="card_value">
+                        {{card2val}}
+                    </div>
+                    <div class="{{ card2suit }}""> </div>
+                    <form action="/hold" method="post">
+                        <button class="{{card2status}}" name="hold" value="card2hold">{{card2status.title()}}</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="card_value">
+                        {{card3val}}
+                    </div>
+                    <div class="{{ card3suit }}""> </div>
+                    <form action="/hold" method="post">
+                        <button class="{{card3status}}" name="hold" value="card3hold">{{card3status.title()}}</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="card_value">
+                        {{card4val}}
+                    </div>
+                    <div class="{{ card4suit }}""> </div>
+                    <form action="/hold" method="post">
+                        <button class="{{card4status}}" name="hold" value="card4hold">{{card4status.title()}}</button>
+                    </form>
+                </div>
+                <div class="card">
+                    <div class="card_value">
+                        {{card5val}}
+                    </div>
+                    <div class="{{ card5suit }}""> </div>
+                    <form action="/hold" method="post">
+                        <button class="{{card5status}}" name="hold" value="card5hold">{{card5status.title()}}</button>
+                    </form>
+                </div>
+            </div>
+            <div class="status">
+                <h4>Current Chips: {{session['chips']}}</h4>
+                <br>
+                Current Hand Value: {{show_hand}}
+                <br>
+                Chips Net Change: {{net_change}}
+            </div>
+        </div>
+        <form action="/draw" method="post" class="drawbutton">
+            <button name="draw" value="{{draw_button_status}}" class ="btn btn-primary">{{draw_button_status}}</button>
+        </form> 
+    </div>
+    <form action="/clear">
+        <button name="new_game" class ="btn btn-primary rightside {{show_game}}">New Game</button>
+    </form>
+</body>
+</html>
